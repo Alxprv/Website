@@ -1,0 +1,176 @@
+{% extends  'store/main.html' %}
+{% load  static %}
+
+{% block content %}
+ <!-- Add padding to account for fixed navigation -->
+    <div class="pt-24">
+        <!-- Main Content -->
+        <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="px-4 py-6 sm:px-0">
+                <h1 class="text-2xl font-semibold text-gray-900">Inquiry History</h1>
+                <p class="mt-1 text-sm text-gray-500">View and manage your inquiries</p>
+            </div>
+
+            <!-- Inquiry List -->
+            <div class="mt-8 space-y-6">
+                <!-- Inquiry Item -->
+                <div class="bg-white shadow sm:rounded-lg">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="text-lg font-medium leading-6 text-gray-900">Weather Station Installation
+                                </h3>
+                                <p class="mt-1 text-sm text-gray-500">Inquiry #12345</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span
+                                    class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
+                                    Resolved
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-sm text-gray-500">
+                                I need help with installing my new Weather Station Pro. The manual is not clear about
+                                the
+                                calibration process.
+                            </p>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span>Submitted on March 20, 2024</span>
+                            </div>
+                            <button type="button"
+                                class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-skycast-blue bg-skycast-blue/10 hover:bg-skycast-blue/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-skycast-blue">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inquiry Item -->
+                <div class="bg-white shadow sm:rounded-lg">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="text-lg font-medium leading-6 text-gray-900">App Subscription Issue</h3>
+                                <p class="mt-1 text-sm text-gray-500">Inquiry #12344</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span
+                                    class="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">
+                                    In Progress
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-sm text-gray-500">
+                                My premium subscription features are not working after the latest app update. I've tried
+                                reinstalling but the issue persists.
+                            </p>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span>Submitted on March 15, 2024</span>
+                            </div>
+                            <button type="button"
+                                class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-skycast-blue bg-skycast-blue/10 hover:bg-skycast-blue/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-skycast-blue">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inquiry Item -->
+                <div class="bg-white shadow sm:rounded-lg">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="text-lg font-medium leading-6 text-gray-900">Data Export Request</h3>
+                                <p class="mt-1 text-sm text-gray-500">Inquiry #12343</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span
+                                    class="inline-flex items-center rounded-full bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800">
+                                    Pending
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-sm text-gray-500">
+                                I need to export my weather data for the past 6 months in CSV format. How can I do this?
+                            </p>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span>Submitted on March 10, 2024</span>
+                            </div>
+                            <button type="button"
+                                class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-skycast-blue bg-skycast-blue/10 hover:bg-skycast-blue/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-skycast-blue">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="mt-6 flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
+                <div class="flex flex-1 justify-between sm:hidden">
+                    <a href="#"
+                        class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
+                    <a href="#"
+                        class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
+                </div>
+                <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+                    <div>
+                        <p class="text-sm text-gray-700">
+                            Showing <span class="font-medium">1</span> to <span class="font-medium">3</span> of <span
+                                class="font-medium">3</span> results
+                        </p>
+                    </div>
+                    <div>
+                        <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+                            <a href="#"
+                                class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                                <span class="sr-only">Previous</span>
+                                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href="#" aria-current="page"
+                                class="relative z-10 inline-flex items-center bg-skycast-blue px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-skycast-blue">1</a>
+                            <a href="#"
+                                class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                                <span class="sr-only">Next</span>
+                                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

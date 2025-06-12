@@ -1,0 +1,183 @@
+{% extends  'store/main.html' %}
+{% load  static %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 pt-24">
+    <!-- Header -->
+    <!-- <div class="px-4 py-6 sm:px-0">
+        <h1 class="text-2xl font-semibold text-gray-900">Request a Quote</h1>
+        <p class="mt-1 text-sm text-gray-500">Fill out the form below to get a customized quote for your needs</p>
+    </div> -->
+
+    <!-- Quote Form -->
+    <div class="mt-8">
+        <div class="bg-white shadow sm:rounded-lg">
+            <div class="px-4 py-5 sm:p-6">
+                <h1 class="text-xl font-semibold leading-6 text-gray-900 text-center">Request a Quote</h1>
+                <div class="mt-2 max-w-2xl text-sm text-gray-500 text-center">
+                    <p>Fill out the form below to get a customized quote for your needs. Our team will review your
+                        request and get back to you within 24 hours.</p>
+                </div>
+                <form id="quoteForm" class="mt-5 space-y-6" method="POST" action="{% url 'submit_quote' %}">
+                         {% csrf_token %}
+                        <!-- Personal Information -->
+                        <div>
+                            <h4 class="text-sm font-medium text-gray-900">Personal Information</h4>
+                <div class="mt-4 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                    <div class="sm:col-span-3">
+                        <label for="first-name" class="block text-sm font-medium text-gray-700">First
+                            name</label>
+                        <div class="mt-1">
+                            <input type="text" name="first-name" id="first-name"
+                                   class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-skycast-blue sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="last-name" class="block text-sm font-medium text-gray-700">Last
+                            name</label>
+                        <div class="mt-1">
+                            <input type="text" name="last-name" id="last-name"
+                                   class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-skycast-blue sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email
+                            address</label>
+                        <div class="mt-1">
+                            <input type="email" name="email" id="email"
+                                   class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-skycast-blue sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone
+                            number</label>
+                        <div class="mt-1">
+                            <input type="tel" name="phone" id="phone"
+                                   class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-skycast-blue sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Selection -->
+            <div>
+                <h4 class="text-sm font-medium text-gray-900">Product Selection</h4>
+                <div class="mt-4 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                    <div class="sm:col-span-4">
+                        <label for="product" class="block text-sm font-medium text-gray-700">Product
+                            Type</label>
+                        <div class="mt-1">
+                            <select id="product" name="product"
+                                    class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-skycast-blue sm:text-sm sm:leading-6">
+                                <option>Weather Station Pro</option>
+                                <option>Weather Station Basic</option>
+                                <option>Weather App Subscription</option>
+                                <option>Custom Solution</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label for="quantity"
+                               class="block text-sm font-medium text-gray-700">Quantity</label>
+                        <div class="mt-1">
+                            <input type="number" name="quantity" id="quantity" min="1"
+                                   class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-skycast-blue sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Requirements -->
+            <div>
+                <h4 class="text-sm font-medium text-gray-900">Additional Requirements</h4>
+                <div class="mt-4">
+                    <label for="requirements" class="block text-sm font-medium text-gray-700">Special
+                        Requirements or Notes</label>
+                    <div class="mt-1">
+                                    <textarea id="requirements" name="requirements" rows="4"
+                                              class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-skycast-blue sm:text-sm sm:leading-6"
+                                              placeholder="Please provide any additional information about your requirements..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex justify-end">
+                <button type="submit"
+                        class="rounded-md bg-skycast-blue px-3 py-2 text-sm font-semibold text-white shadow hover:bg-skycast-blue/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-skycast-blue">
+                    Request Quote
+                </button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('quoteForm');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Required fields
+        const requiredFields = [
+            'first-name',
+            'last-name',
+            'email',
+            'phone',
+            'product',
+            'quantity'
+        ];
+
+        let hasEmpty = false;
+
+        requiredFields.forEach(id => {
+            const field = document.getElementById(id);
+            if (!field.value.trim()) {
+                field.classList.add('ring-red-500');
+                hasEmpty = true;
+            } else {
+                field.classList.remove('ring-red-500');
+            }
+        });
+
+        if (hasEmpty) {
+            alert('Please fill in all required fields.');
+            return; // Stop submission
+        }
+
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+            },
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.redirect) {
+                window.location.href = data.redirect;
+                return;
+            }
+            alert(data.message);
+            if (data.success) {
+                form.reset();  // when success, initialize form
+            }
+        })
+        .catch(error => {
+            alert('There was an error sending your request.');
+            console.error(error);
+        });
+    });
+});
+</script>
+
+{% endblock content %}

@@ -1,0 +1,469 @@
+{% extends  'store/main.html' %}
+{% load  static %}
+
+{% block content %}
+<main>
+    <!-- Hero Section -->
+    <section class="service-bg min-h-20 py-28 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-45"></div>
+        <div class="relative z-10 text-left max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        MARITIME CONNECTIVITY
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 leading-relaxed">
+                        Ensuring you can maintain crew welfare and safety with maritime satellite systems to help you
+                        stay
+                        connected when it matters most.
+                    </p>
+                    <a href="{% url 'discover_more' %}">
+                    <button
+                            class="bg-slate-100 hover:bg-slate-900 text-slate-900 hover:text-white px-8 py-3 rounded-lg font-semibold transition">
+                        Get in touch
+                    </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connectivity Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                        CONNECTIVITY WITH CERTAINTY.
+                    </h2>
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
+                        SINCE ITS INCEPTION, INMARSAT HAS BEEN COMMITTED TO KEEPING YOU CONNECTED ANYWHERE, ANYTIME,
+                        WITHOUT COMPROMISE.
+                    </h3>
+                </div>
+                <div class="space-y-4 text-gray-700 leading-relaxed">
+                    <p>As the maritime industry gets increasingly digitalised, more and more vessels are depending on
+                        reliable connectivity to access cloud-based services and adopting new technologies to enable
+                        digitalisation, decarbonisation and crew welfare.</p>
+                    <p>You need to know your connectivity partner can deliver the services you require no matter out at
+                        the future. At Inmarsat, we are creating technology platforms and services with unmatched
+                        maritime pedigree and proven global reach.</p>
+                    <p>Whether it's critical and operational applications, or for mariners to keep in touch with loved
+                        ones.</p>
+                    <p>— all delivered through our world-leading satellite network.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maritime Solutions -->
+    <section class="ocean-gradient py-16 text-white relative mb-48 lg:mb-60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-1 gap-12 items-center">
+                <div class="lg:pt-32">
+                    <h2 class="text-3xl md:text-6xl font-bold mb-6 text-white lg:max-w-4xl">
+                        MARITIME CONNECTIVITY SOLUTIONS
+                    </h2>
+                    <p class="text-lg leading-relaxed max-w-2xl">
+                        As the maritime regulatory landscape evolves, demand for connectivity is growing, the increased
+                        adoption of maritime connectivity technology, particularly in the Commercial shipping sector has
+                        been rapid over the past few years.
+                    </p>
+                    <p class="text-lg leading-relaxed mt-4 lg:max-w-2xl">
+                        At Inmarsat we recognise this reality as critical, and to remain connected while at sea and in
+                        port is becoming business as usual.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Solution Cards -->
+            <div class="mt-16 relative">
+                <!-- Slider main container -->
+                <div class="swiper solutions-swiper -mb-48 lg:-mb-60">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide slide bg-cover bg-center rounded-lg p-6"
+                             style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=200&fit=crop');">
+                            <div class="relative z-10 text-white flex flex-col h-full min-h-40 justify-end">
+                                <h3 class="text-xl font-semibold mb-2">Crew welfare</h3>
+                                <p class="text-sm opacity-0 transition-opacity duration-300">Enhancing crew well-being
+                                    through reliable connectivity solutions.</p>
+                                <a href="{% url 'discover_more' %}">
+                                <button
+                                        class="bg-white text-blue-900 w-8 h-8 rounded-full flex items-center justify-center mt-4 self-start transition-transform duration-300">
+                                    &rarr;
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide bg-cover bg-center rounded-lg p-6"
+                             style="background-image: url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=300&h=200&fit=crop');">
+                            <div class="relative z-10 text-white flex flex-col h-full min-h-40 justify-end">
+                                <h3 class="text-xl font-semibold mb-2">Cyber security</h3>
+                                <p class="text-sm opacity-0 transition-opacity duration-300">Protecting maritime
+                                    operations with advanced security measures.</p>
+                                <a href="{% url 'discover_more' %}">
+                                <button
+                                        class="bg-white text-blue-900 w-8 h-8 rounded-full flex items-center justify-center mt-4 self-start transition-transform duration-300">
+                                    &rarr;
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide bg-cover bg-center rounded-lg p-6"
+                             style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop');">
+                            <div class="relative z-10 text-white flex flex-col h-full min-h-40 justify-end">
+                                <h3 class="text-xl font-semibold mb-2">Decarbonisation</h3>
+                                <p class="text-sm opacity-0 transition-opacity duration-300">Supporting sustainable
+                                    maritime operations through technology.</p>
+                                <a href="{% url 'discover_more' %}">
+                                <button
+                                        class="bg-white text-blue-900 w-8 h-8 rounded-full flex items-center justify-center mt-4 self-start transition-transform duration-300">
+                                    &rarr;
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide bg-cover bg-center rounded-lg p-6"
+                             style="background-image: url('https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=300&h=200&fit=crop');">
+                            <div class="relative z-10 text-white flex flex-col h-full min-h-40 justify-end">
+                                <h3 class="text-xl font-semibold mb-2">Connectivity</h3>
+                                <p class="text-sm opacity-0 transition-opacity duration-300">Reliable global
+                                    connectivity solutions for maritime operations.</p>
+                                <a href="{% url 'discover_more' %}">
+                                <button
+                                        class="bg-white text-blue-900 w-8 h-8 rounded-full flex items-center justify-center mt-4 self-start transition-transform duration-300">
+                                    &rarr;
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide bg-cover bg-center rounded-lg p-6"
+                             style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=300&h=200&fit=crop');">
+                            <div class="relative z-10 text-white flex flex-col h-full min-h-40 justify-end">
+                                <h3 class="text-xl font-semibold mb-2">Technology</h3>
+                                <p class="text-sm opacity-0 transition-opacity duration-300">Cutting-edge maritime
+                                    technology solutions for modern vessels.</p>
+                                <a href="{% url 'discover_more' %}">
+                                <button
+                                        class="bg-white text-blue-900 w-8 h-8 rounded-full flex items-center justify-center mt-4 self-start transition-transform duration-300">
+                                    &rarr;
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination solutions-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev solutions-prev"></div>
+                    <div class="swiper-button-next solutions-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Focus On Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">FOCUS ON</h2>
+            <p class="text-gray-700 mb-12 max-w-3xl">
+                Every shipping company has differing objectives and requirements. We provide unmatched end-to-end
+                maritime connectivity services you can rely on, regardless of what sector you operate. Then however
+                ships and the sectors to effective support and trading vessels.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="relative group cursor-pointer overflow-hidden rounded-lg focus-on-card">
+                    <img src="{% static 'img/event.jpg' %}" alt="Merchant"
+                         class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h3 class="text-xl font-semibold mb-2">MERCHANT</h3>
+                        <p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 mb-2">
+                            Comprehensive connectivity solutions for merchant vessels.</p>
+                        <a href="{% url 'discover_more' %}">
+                        <button
+                                class="bg-white text-black w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:translate-x-2">→</button>
+                        </a>>
+                    </div>
+                </div>
+
+                <div class="relative group cursor-pointer overflow-hidden rounded-lg focus-on-card">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop"
+                         alt="Offshore and Energy"
+                         class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h3 class="text-xl font-semibold mb-2">OFFSHORE AND ENERGY</h3>
+                        <p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 mb-2">
+                            Specialized connectivity for offshore and energy operations.</p>
+                        <a href="{% url 'discover_more' %}">
+                        <button
+                                class="bg-white text-black w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:translate-x-2">→</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative group cursor-pointer overflow-hidden rounded-lg focus-on-card">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop"
+                         alt="Fishing"
+                         class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h3 class="text-xl font-semibold mb-2">FISHING</h3>
+                        <p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 mb-2">
+                            Reliable connectivity solutions for fishing vessels.</p>
+                        <a href="{% url 'discover_more' %}">
+                        <button
+                                class="bg-white text-black w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:translate-x-2">→</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maritime Insights -->
+    <section class="maritime-bg py-16 text-white mb-48 lg:mb-60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-12 lg:pt-32">
+                <h2 class="text-3xl md:text-6xl font-bold">MARITIME INSIGHTS</h2>
+                <a href="{% url 'discover_more' %}">
+                <button class="bg-white text-blue-900 px-6 py-2 rounded hover:bg-gray-100 transition flex items-center">
+                    View all
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                </a>
+            </div>
+
+            <!-- Slider main container -->
+            <div class="swiper insights-swiper -mb-48 lg:-mb-60">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide slide bg-cover bg-center rounded-lg p-6"
+                         style="background-image: url('{% static "img/maritime.png" %}');">
+                    <div class="relative z-10 text-white flex flex-col h-full min-h-40 justify-end">
+                        <h3 class="text-xl font-semibold mb-2">The Future of Maritime Safety 2024</h3>
+                        <a href="{% url 'discover_more' %}">
+                        <button
+                                class="bg-white text-blue-900 w-8 h-8 rounded-full flex items-center justify-center mt-4 self-start">
+                            &rarr;
+                        </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide slide bg-cover bg-center rounded-lg p-6"
+                     style="background-image: url('{% static "img/maritime_01.jpg" %}');">
+                <div class="relative z-10 text-white flex flex-col h-full min-h-40 justify-end">
+                    <h3 class="text-xl font-semibold mb-2">The Digital Wave</h3>
+                    <a href="{% url 'discover_more' %}">
+                    <button
+                            class="bg-white text-blue-900 w-8 h-8 rounded-full flex items-center justify-center mt-4 self-start">
+                        &rarr;
+                    </button>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide slide bg-cover bg-center rounded-lg p-6"
+                 style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=200&fit=crop');">
+                <div class="relative z-10 text-white flex flex-col h-full min-h-40 justify-end">
+                    <h3 class="text-xl font-semibold mb-2">Customer care you can rely on</h3>
+                    <a href="{% url 'discover_more' %}">
+                    <button
+                            class="bg-white text-blue-900 w-8 h-8 rounded-full flex items-center justify-center mt-4 self-start">
+                        &rarr;
+                    </button>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide slide bg-cover bg-center rounded-lg p-6"
+                 style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop');">
+                <div class="relative z-10 text-white flex flex-col h-full min-h-40 justify-end">
+                    <h3 class="text-xl font-semibold mb-2">Another Insight Here</h3>
+                    <a href="{% url 'discover_more' %}">
+                    <button
+                            class="bg-white text-blue-900 w-8 h-8 rounded-full flex items-center justify-center mt-4 self-start">
+                        &rarr;
+                    </button>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide slide bg-cover bg-center rounded-lg p-6"
+                 style="background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop');">
+                <div class="relative z-10 text-white flex flex-col h-full min-h-40 justify-end">
+                    <h3 class="text-xl font-semibold mb-2">Yet Another Insight</h3>
+                    <a href="{% url 'discover_more' %}">
+                    <button
+                            class="bg-white text-blue-900 w-8 h-8 rounded-full flex items-center justify-center mt-4 self-start">
+                        &rarr;
+                    </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination insights-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev insights-prev"></div>
+        <div class="swiper-button-next insights-next"></div>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Maritime Connectivity Services -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">MARITIME CONNECTIVITY SERVICES</h2>
+            <p class="text-gray-700 mb-12 max-w-4xl">
+                The connected enterprise starts at the heart of the solution. We are introducing a new world of maritime
+                digitalisation, powering the next generation of high-speed global, mobile maritime technologies and
+                connectivity services for every vessel at sea. Discover how our satellite communications are making the
+                connected ship a reality at sea.
+            </p>
+
+            <!-- Slider main container -->
+            <div class="swiper services-swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide slide bg-cover bg-center rounded-lg p-6"
+                         style="background-image: url('{% static "img/fleet-edge.jpg" %}');">
+                    <div class="relative z-10 text-white flex flex-col h-full min-h-40 justify-end">
+                        <h3 class="text-xl font-semibold mb-2">Fleet Edge</h3>
+                        <p class="text-sm opacity-0 transition-opacity duration-300">Advanced fleet management
+                            solutions for modern maritime operations.</p>
+                        <a href="{% url 'discover_more' %}">
+                        <button
+                                class="bg-white text-blue-900 w-8 h-8 rounded-full flex items-center justify-center mt-4 self-start transition-transform duration-300">
+                            &rarr;
+                        </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide bg-cover bg-center rounded-lg p-6"
+                     style="background-image: url('{% static "img/fleet-mail.jpg" %}');">
+                <div class="relative z-10 text-white flex flex-col h-full min-h-40 justify-end">
+                    <h3 class="text-xl font-semibold mb-2">Fleet Mail</h3>
+                    <p class="text-sm opacity-0 transition-opacity duration-300">Simple, reliable, cloud-based
+                        email and file transfer communication.</p>
+                    <a href="{% url 'discover_more' %}">
+                    <button
+                            class="bg-white text-blue-900 w-8 h-8 rounded-full flex items-center justify-center mt-4 self-start transition-transform duration-300">
+                        &rarr;
+                    </button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide bg-cover bg-center rounded-lg p-6"
+                 style="background-image: url('{% static "img/fiber-cables.jpg" %}');">
+            <div class="relative z-10 text-white flex flex-col h-full min-h-40 justify-end">
+                <h3 class="text-xl font-semibold mb-2">Fleet Care</h3>
+                <p class="text-sm opacity-0 transition-opacity duration-300">Comprehensive support and
+                    maintenance services for your fleet.</p>
+                <a href="{% url 'discover_more' %}">
+                <button
+                        class="bg-white text-blue-900 w-8 h-8 rounded-full flex items-center justify-center mt-4 self-start transition-transform duration-300">
+                    &rarr;
+                </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="swiper-slide slide bg-cover bg-center rounded-lg p-6"
+             style="background-image: url('{% static "img/maritime_01.jpg" %}');">
+        <div class="relative z-10 text-white flex flex-col h-full min-h-40 justify-end">
+            <h3 class="text-xl font-semibold mb-2">NexusWave</h3>
+            <p class="text-sm opacity-0 transition-opacity duration-300">Next-generation connectivity
+                solutions for maritime operations.</p>
+            <a href="{% url 'discover_more' %}">
+            <button
+                    class="bg-white text-blue-900 w-8 h-8 rounded-full flex items-center justify-center mt-4 self-start transition-transform duration-300">
+                &rarr;
+            </button>
+            </a>
+        </div>
+        </div>
+
+        <div class="swiper-slide slide bg-cover bg-center rounded-lg p-6"
+             style="background-image: url('{% static "img/service-hero.jpg" %}');">
+        <div class="relative z-10 text-white flex flex-col h-full min-h-40 justify-end">
+            <h3 class="text-xl font-semibold mb-2">Fleet Xpress</h3>
+            <p class="text-sm opacity-0 transition-opacity duration-300">High-speed broadband
+                connectivity for maritime vessels.</p>
+            <a href="{% url 'discover_more' %}">
+            <button
+                    class="bg-white text-blue-900 w-8 h-8 rounded-full flex items-center justify-center mt-4 self-start transition-transform duration-300">
+                &rarr;
+            </button>
+            </a>
+        </div>
+        </div>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination services-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev services-prev"></div>
+        <div class="swiper-button-next services-next"></div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Latest News -->
+    <section class="bg-slate-100 py-16 text-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">LATEST NEWS</h2>
+<!--                <button class="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600 transition">-->
+<!--                    View all-->
+<!--                </button>-->
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <div class="text-sm text-gray-700 mb-2">23 May 2024</div>
+                    <h3 class="font-base text-black mb-2">Inmarsat partners with StratumFive to enhance onboard IT
+                        infrastructure onboard Rigasblanca</h3>
+                </div>
+
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <div class="text-sm text-gray-700 mb-2">23 Apr 2024</div>
+                    <h3 class="font-base text-black mb-2">Inmarsat's ELERA network delivers for the Maritime</h3>
+                </div>
+
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <div class="text-sm text-gray-700 mb-2">16 Apr 2024</div>
+                    <h3 class="font-base text-black mb-2">Digital delivery for connected yet better and protected vessel
+                    </h3>
+                </div>
+
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <div class="text-sm text-gray-700 mb-2">07 Jan 2024</div>
+                    <h3 class="font-base text-black mb-2">Ship EPFD exceeding regulatory data for more intelligent
+                        shipping of
+                        maritime safety</h3>
+                </div>
+
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <div class="text-sm text-gray-700 mb-2">26 Mar 2024</div>
+                    <h3 class="font-base text-black mb-2">Improving Safety Both ship-to-shore communications for crew
+                        support
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock content %}

@@ -1,0 +1,76 @@
+{% extends  'store/main.html' %}
+{% load  static %}
+
+{% block content %}
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 mt-16">
+    <h1 class="text-4xl font-bold text-gray-900 mb-12 text-center">Your Cart</h1>
+    <form id="cartForm" class="space-y-6" method="POST" action="{% url 'cart_quote' %}">
+        {% csrf_token %}
+        <div id="cart-items" class="space-y-6">
+            <!-- Cart items will be loaded here by JavaScript -->
+        </div>
+
+        <div id="cart-total" class="mt-8 text-right text-2xl font-bold text-gray-900">
+            <!-- Cart total will be loaded here by JavaScript -->
+        </div>
+
+        <div class="mt-8 flex justify-end">
+            <button id="checkout-btn"
+                    class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg transition-colors">
+                Request quotation
+            </button>
+        </div>
+    </form>
+</main>
+<script>
+function getCart() {
+    return JSON.parse(localStorage.getItem('cart') || '[]');
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('cartForm');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const cartItems = getCart();
+
+        if (!cartItems || cartItems.length === 0) {
+            alert('Your cart is empty. Please add products before requesting a quote.');
+            return;
+        }
+
+        const formData = new FormData(form);
+        formData.append('cart', JSON.stringify(cartItems));
+
+        fetch(form.action, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+            },
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+        })
+        .then(data => {
+            if (data.redirect) {
+                window.location.href = data.redirect;
+                return;
+            }
+            alert(data.message || 'Thank you! Your message has been sent.');
+            if (data.success) {
+                form.reset();
+                removeAllFromCart();
+            }
+        })
+        .catch(error => {
+            console.log('error:', error);
+            alert('There was an error sending your request.');
+            console.error(error);
+        });
+    });
+});
+</script>
+{% endblock content %}

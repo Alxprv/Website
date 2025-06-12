@@ -1,0 +1,164 @@
+{% extends  'store/main.html' %}
+{% load  static %}
+
+{% block content %}
+<main>
+        <!-- Hero Section -->
+        <section class="relative hero-news-bg min-h-20 py-36 text-white">
+            <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Overlay for readability -->
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 z-10 text-left">
+                <h1 class="text-5xl lg:text-7xl font-bold mb-4">NEWS</h1>
+                <p class="text-xl">Find all our announcements and a selection of imagery</p>
+                <p class="text-lg">- and sign up to receive our latest news.</p>
+            </div>
+        </section>
+
+        <!-- Latest News Section -->
+        <section class="py-16 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900">LATEST NEWS</h2>
+<!--                    <a href="#"-->
+<!--                        class="px-6 py-2 bg-sky-500 text-white font-semibold rounded-md hover:bg-sky-600 transition-colors">View-->
+<!--                        All</a>-->
+                </div>
+
+                <!-- News Articles Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+                    <!-- News Article 1 -->
+                    <article class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="text-gray-500 text-sm mb-2">22 May 2025</p>
+                        <h3 class="text-base font-normal text-gray-900 mb-4">Inmarsat provides NexusWave to Mitsui
+                            O.S.K. lines to help accelerate onboard digitalisation strategy</h3>
+                        <!-- Add more content here if needed -->
+                    </article>
+
+                    <!-- News Article 2 -->
+                    <article class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="text-gray-500 text-sm mb-2">23 Apr 2025</p>
+                        <h3 class="text-base font-normal text-gray-900 mb-4">Sallaum Lines selects Inmarsat NexusWave to
+                            drive fleetwide digitalisation strategy</h3>
+                        <!-- Add more content here if needed -->
+                    </article>
+
+                    <!-- News Article 3 -->
+                    <article class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="text-gray-500 text-sm mb-2">15 Apr 2025</p>
+                        <h3 class="text-base font-normal text-gray-900 mb-4">Caribe Tankers to trial Inmarsat NexusWave
+                            for connected certainty and enhanced crew welfare</h3>
+                        <!-- Add more content here if needed -->
+                    </article>
+
+                    <!-- News Article 4 -->
+                    <article class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="text-gray-500 text-sm mb-2">01 Apr 2025</p>
+                        <h3 class="text-base font-normal text-gray-900 mb-4">SEA-CARE working group to look beyond
+                            'top-level' data for more holistic understanding of maritime safety</h3>
+                        <!-- Add more content here if needed -->
+                    </article>
+
+                    <!-- News Article 5 -->
+                    <article class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="text-gray-500 text-sm mb-2">25 Mar 2025</p>
+                        <h3 class="text-base font-normal text-gray-900 mb-4">Anthony Veder to upgrade entire fleet with
+                            Inmarsat NexusWave for seamless high-speed connectivity</h3>
+                        <!-- Add more content here if needed -->
+                    </article>
+
+                    <!-- Add more articles as needed, they will wrap on smaller screens -->
+
+                </div>
+                <!-- Note: You might need JavaScript to make the news articles into a horizontal slider on desktop, or use Tailwind's overflow-x-auto and scroll snapping. The grid approach is simpler for basic responsiveness. -->
+            </div>
+        </section>
+
+        <!-- Gallery, Newsletter, Awards Section -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Media Gallery Block -->
+                    <div class="relative bg-cover bg-center h-64 rounded-lg overflow-hidden"
+                         style="background-image: url('{% static "img/media.jpg" %}');">
+                        <div class="absolute inset-0 bg-black opacity-50 hover:opacity-25"></div>
+                        <div class="relative z-10 flex flex-col justify-end h-full p-6 text-white">
+                            <h3 class="text-2xl font-bold mb-2">MEDIA GALLERY</h3>
+                            <a href="{% url 'discover_more' %}" class="flex items-center text-sky-300 hover:text-sky-400 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 transform rotate-180"
+                                    fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Viasat Connects Newsletter Block -->
+                    <div class="relative bg-cover bg-center h-64 rounded-lg overflow-hidden"
+                         style="background-image: url('{% static "img/newsletter.jpg" %}');">
+                        <div class="absolute inset-0 bg-black opacity-50 hover:opacity-25"></div>
+                        <div class="relative z-10 flex flex-col justify-end h-full p-6 text-white">
+                            <h3 class="text-2xl font-bold mb-2">VIASAT CONNECTS NEWSLETTER</h3>
+                            <a href="{% url 'discover_more' %}" class="flex items-center text-sky-300 hover:text-sky-400 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 transform rotate-180"
+                                    fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Awards Block -->
+                    <div class="relative bg-cover bg-center h-64 rounded-lg overflow-hidden"
+                         style="background-image: url('{% static "img/award.jpg" %}');">
+                        <div class="absolute inset-0 bg-black opacity-50 hover:opacity-25"></div>
+                        <div class="relative z-10 flex flex-col justify-end h-full p-6 text-white">
+                            <h3 class="text-2xl font-bold mb-2">AWARDS</h3>
+                            <a href="{% url 'discover_more' %}" class="flex items-center text-sky-300 hover:text-sky-400 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 transform rotate-180"
+                                    fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- You May Also Be Interested In Section -->
+        <section class="py-16 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">YOU MAY ALSO BE INTERESTED IN</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Events Block -->
+                    <div class="relative bg-cover bg-center h-64 rounded-lg overflow-hidden"
+                         style="background-image: url('{% static "img/event.jpg" %}');">
+                        <div class="absolute inset-0 bg-black opacity-50"></div>
+                        <div class="relative z-10 flex flex-col justify-end max-w-40 h-full p-6 text-white">
+                            <a href="{% url 'discover_more' %}">
+                            <button
+                                class="bg-slate-100 hover:bg-slate-900 text-slate-900 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                                Events
+                            </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- What We Do Block -->
+                    <div class="relative bg-cover bg-center h-64 rounded-lg overflow-hidden"
+                         style="background-image: url('{% static "img/what-we-do.jpg" %}');">
+                        <div class="absolute inset-0 bg-black opacity-50"></div>
+                        <div class="relative z-10 flex flex-col justify-end max-w-60 h-full p-6 text-white">
+                            <a href="{% url 'discover_more' %}">
+                            <button
+                                class="bg-slate-100 hover:bg-slate-900 text-slate-900 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                                What we do
+                            </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+{% endblock content %}

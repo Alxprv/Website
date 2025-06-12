@@ -1,0 +1,476 @@
+{% extends  'store/main.html' %}
+{% load  static %}
+
+{% block content %}
+<main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg min-h-screen flex items-center pt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-white">
+                        <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                            Maritime Broadband<br>
+                            <span class="text-blue-300">Connectivity</span>
+                        </h1>
+                        <p class="text-lg lg:text-xl mb-8 text-blue-100 leading-relaxed">
+                            Experience a fully managed connectivity solution driven by cutting-edge network bonding and
+                            dynamic channel allocation to optimize performance across a complex multi-dimensional
+                            network
+                            ecosystem.
+                        </p>
+                        <a href="{% url 'discover_more' %}">
+                        <button
+                            class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full text-base font-semibold transition-colors">
+                            Discover More
+                        </button>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="space-y-4">
+                            <img src="{% static 'img/fiber-cables.jpg' %}" alt="Maritime Technology"
+                                class="rounded-lg w-full h-32 object-cover">
+                            <img src="{% static 'img/maintenance-support.jpg' %}" alt="maintenance-support"
+                                class="rounded-lg w-full h-40 object-cover">
+                        </div>
+                        <div class="space-y-4">
+                            <img src="{% static 'img/consulting.jpg' %}" alt="Satellite Communication"
+                                class="rounded-lg w-full h-40 object-cover">
+                            <img src="{% static 'img/wifi-router-with-modem.jpg' %}" alt="Maritime Network"
+                                class="rounded-lg w-full h-32 object-cover">
+                        </div>
+                        <div class="space-y-4">
+                            <img src="{% static 'img/antenna.png' %}" alt="Satellite Antenna"
+                                class="rounded-lg w-full h-32 object-cover">
+                            <img src="{% static 'img/training.jpg' %}" alt="Technical Training"
+                                class="rounded-lg w-full h-40 object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Green Section -->
+        <section class="green-section py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <video src="{% static 'img/video.mp4' %}" class="rounded-lg w-full h-80 object-cover shadow-2xl" autoplay loop
+                            muted playsinline></video>
+                    </div>
+                    <div class="text-white order-1 lg:order-2">
+                        <h2 class="text-3xl lg:text-3xl font-bold mb-6">
+                            PEOPLE, INDUSTRIES AND GOVERNMENTS AROUND THE WORLD RELY ON OUR SEAMLESS GLOBAL MOBILE
+                            SATELLITE
+                            COMMUNICATIONS TO CONNECT THEM WHEN IT MATTERS MOST.
+                        </h2>
+                        <a href="{% url 'discover_more' %}">
+                        <button
+                            class="bg-white text-green-600 hover:bg-gray-100 px-6 py-3 rounded-full font-semibold transition-colors">
+                            Explore Technology
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products & Services -->
+        <section id="products" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Products & Services</h2>
+                    <div class="flex justify-center space-x-8">
+                        <button id="products-tab"
+                            class="font-semibold text-skycast-blue border-skycast-blue pb-2 tab-button active">Products</button>
+                        <button id="services-tab"
+                            class="font-semibold text-gray-500 hover:text-skycast-blue transition-colors tab-button">Services</button>
+                    </div>
+                </div>
+
+                <!-- Products Content -->
+                <div id="products-content" class="tab-content">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <a href="{% url 'discover_more' %}">
+                        <div class="bg-white rounded-lg p-6 shadow-lg card-hover">
+                            <img src="{% static 'img/fiber-cables.jpg' %}" alt="Internet Fiber Cables"
+                                class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold mb-2">Internet Fiber Cables</h3>
+                            <p class="text-gray-600">High-speed fiber optic cables that can span regions to deliver fast
+                                internet connectivity.</p>
+                        </div>
+                        </a>
+
+                        <a href="{% url 'discover_more' %}">
+                        <div class="bg-white rounded-lg p-6 shadow-lg card-hover">
+                            <img src="{% static 'img/wifi-router-with-modem.jpg' %}" alt="WiFi Routers & Modems"
+                                class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold mb-2">WiFi Routers & Modems</h3>
+                            <p class="text-gray-600">Enterprise-grade routers with multiple port configurations and fast
+                                connectivity speeds.</p>
+                        </div>
+                        </a>
+
+                        <a href="{% url 'discover_more' %}">
+                        <div class="bg-white rounded-lg p-6 shadow-lg card-hover">
+                            <img src="{% static 'img/wifi-extender.jpg'%}" alt="WiFi Extender Routers"
+                                class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold mb-2">WiFi Extender Routers</h3>
+                            <p class="text-gray-600">Extend your WiFi coverage with professional routers that work well
+                                with
+                                all array.</p>
+                        </div>
+                        </a>
+
+                        <a href="{% url 'discover_more' %}">
+                        <div class="bg-white rounded-lg p-6 shadow-lg card-hover">
+                            <img src="{% static 'img/antenna.png' %}" alt="Satellite Antenna"
+                                class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold mb-2">Satellite Antenna</h3>
+                            <p class="text-gray-600">Maritime satellite communication systems and high-performance
+                                satellite
+                                solutions.</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services Content -->
+                <div id="services-content" class="tab-content hidden">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <a href="{% url 'discover_more' %}">
+                        <div class="bg-white rounded-lg p-6 shadow-lg card-hover">
+                            <img src="{% static 'img/network-installation.jpg' %}" alt="Network Installation"
+                                class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold mb-2">Network Installation</h3>
+                            <p class="text-gray-600">Professional installation of network infrastructure for optimal
+                                performance and reliability.</p>
+                        </div>
+                        </a>
+
+                        <a href="{% url 'discover_more' %}">
+                        <div class="bg-white rounded-lg p-6 shadow-lg card-hover">
+                            <img src="{% static 'img/maintenance-support.jpg' %}" alt="Maintenance & Support"
+                                class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold mb-2">Maintenance & Support</h3>
+                            <p class="text-gray-600">24/7 technical support and regular maintenance to ensure
+                                uninterrupted
+                                connectivity.</p>
+                        </div>
+                        </a>
+
+                        <a href="{% url 'discover_more' %}">
+                        <div class="bg-white rounded-lg p-6 shadow-lg card-hover">
+                            <img src="{% static 'img/consulting.jpg' %}" alt="Network Consulting"
+                                class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold mb-2">Network Consulting</h3>
+                            <p class="text-gray-600">Expert advice on network optimization, security, and infrastructure
+                                planning.</p>
+                        </div>
+                        </a>
+
+                        <a href="{% url 'discover_more' %}">
+                        <div class="bg-white rounded-lg p-6 shadow-lg card-hover">
+                            <img src="{% static 'img/training.jpg' %}" alt="Technical Training"
+                                class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold mb-2">Technical Training</h3>
+                            <p class="text-gray-600">Comprehensive training programs for your team on network management
+                                and
+                                maintenance.</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy Section -->
+        <section class="hero-bg py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold text-white mb-4">Maritime Connectivity Strategy</h2>
+                <h3 class="text-2xl text-blue-200 mb-8">generating value and new opportunities</h3>
+                <p class="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+                    We lay out the key benefits of connectivity for shipping companies, including crew welfare,
+                    decarbonization and digitalization.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="{% url 'discover_more' %}">
+                    <button
+                        class="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+                        Read more
+                    </button>
+                    </a>
+<!--                    <button-->
+<!--                        class="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">-->
+<!--                        View all-->
+<!--                    </button>-->
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News -->
+        <section id="news" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-16 text-green-600">Latest News</h2>
+
+                <div class="relative">
+                    <!-- Swiper -->
+                    <div class="swiper newsSwiper">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <a href="{% url 'discover_more' %}">
+                                <div
+                                    class="bg-white rounded-lg overflow-hidden shadow-lg card-hover h-[400px] flex flex-col">
+                                    <img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=300&h=200&fit=crop"
+                                        alt="Satellite Technology" class="w-full h-48 object-cover">
+                                    <div class="p-6 flex-1 flex flex-col">
+                                        <h3 class="font-bold mb-2 text-lg line-clamp-2">Exploring How Modern Satellites
+                                            Are Transforming
+                                            Weather Prediction Technology</h3>
+                                        <p class="text-gray-600 text-sm flex-1">Advanced satellite technology is
+                                            revolutionizing meteorological forecasting...</p>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="{% url 'discover_more' %}">
+                                <div
+                                    class="bg-white rounded-lg overflow-hidden shadow-lg card-hover h-[400px] flex flex-col">
+                                    <img src="https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=300&h=200&fit=crop"
+                                        alt="GPS Technology" class="w-full h-48 object-cover">
+                                    <div class="p-6 flex-1 flex flex-col">
+                                        <h3 class="font-bold mb-2 text-lg line-clamp-2">How GPS Satellites Enable
+                                            Transformative New
+                                            Navigation Applications</h3>
+                                        <p class="text-gray-600 text-sm flex-1">Modern GPS technology enables precise
+                                            navigation and location services...</p>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="{% url 'discover_more' %}">
+                                <div
+                                    class="bg-white rounded-lg overflow-hidden shadow-lg card-hover h-[400px] flex flex-col">
+                                    <img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=300&h=200&fit=crop"
+                                        alt="Maritime Connectivity" class="w-full h-48 object-cover">
+                                    <div class="p-6 flex-1 flex flex-col">
+                                        <h3 class="font-bold mb-2 text-lg line-clamp-2">Improving Satellite Connectivity
+                                            for Maritime
+                                            Operations</h3>
+                                        <p class="text-gray-600 text-sm flex-1">Enhanced maritime satellite
+                                            communication
+                                            systems provide reliable connectivity...</p>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="{% url 'discover_more' %}">
+                                <div
+                                    class="bg-white rounded-lg overflow-hidden shadow-lg card-hover h-[400px] flex flex-col">
+                                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=300&h=200&fit=crop"
+                                        alt="Ocean Technology" class="w-full h-48 object-cover">
+                                    <div class="p-6 flex-1 flex flex-col">
+                                        <h3 class="font-bold mb-2 text-lg line-clamp-2">A Deep Dive into Ocean-Based
+                                            Connectivity
+                                            Technology</h3>
+                                        <p class="text-gray-600 text-sm flex-1">Underwater communication systems and
+                                            oceanic
+                                            connectivity solutions...</p>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="{% url 'discover_more' %}">
+                                <div
+                                    class="bg-white rounded-lg overflow-hidden shadow-lg card-hover h-[400px] flex flex-col">
+                                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=300&h=200&fit=crop"
+                                        alt="Space Technology" class="w-full h-48 object-cover">
+                                    <div class="p-6 flex-1 flex flex-col">
+                                        <h3 class="font-bold mb-2 text-lg line-clamp-2">The Future of Space-Based
+                                            Internet Technology</h3>
+                                        <p class="text-gray-600 text-sm flex-1">Revolutionary developments in
+                                            space-based
+                                            internet infrastructure...</p>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="{% url 'discover_more' %}">
+                                <div
+                                    class="bg-white rounded-lg overflow-hidden shadow-lg card-hover h-[400px] flex flex-col">
+                                    <img src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?w=300&h=200&fit=crop"
+                                        alt="Satellite Launch" class="w-full h-48 object-cover">
+                                    <div class="p-6 flex-1 flex flex-col">
+                                        <h3 class="font-bold mb-2 text-lg line-clamp-2">New Satellite Launch Program
+                                            Announced</h3>
+                                        <p class="text-gray-600 text-sm flex-1">Expanding global coverage with
+                                            next-generation
+                                            satellite technology...</p>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="{% url 'discover_more' %}">
+                                <div
+                                    class="bg-white rounded-lg overflow-hidden shadow-lg card-hover h-[400px] flex flex-col">
+                                    <img src="https://images.unsplash.com/photo-1516849677043-ef67c9557e16?w=300&h=200&fit=crop"
+                                        alt="Network Security" class="w-full h-48 object-cover">
+                                    <div class="p-6 flex-1 flex flex-col">
+                                        <h3 class="font-bold mb-2 text-lg line-clamp-2">Enhanced Security for Satellite
+                                            Networks</h3>
+                                        <p class="text-gray-600 text-sm flex-1">Advanced security measures for
+                                            protecting
+                                            satellite communications...</p>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="{% url 'discover_more' %}">
+                                <div
+                                    class="bg-white rounded-lg overflow-hidden shadow-lg card-hover h-[400px] flex flex-col">
+                                    <img src="https://images.unsplash.com/photo-1516849677043-ef67c9557e16?w=300&h=200&fit=crop"
+                                        alt="IoT Technology" class="w-full h-48 object-cover">
+                                    <div class="p-6 flex-1 flex flex-col">
+                                        <h3 class="font-bold mb-2 text-lg line-clamp-2">IoT Integration with Satellite
+                                            Systems</h3>
+                                        <p class="text-gray-600 text-sm flex-1">Connecting IoT devices through advanced
+                                            satellite networks...</p>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Navigation -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact" class="contact-bg py-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white mb-4">Request Quotation</h2>
+                    <p class="text-blue-100">Get in touch with our maritime connectivity experts</p>
+                </div>
+
+                <form id="homeForm" class="space-y-6" method="POST" action="{% url 'home_quote' %}">
+                    {% csrf_token %}
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="full-name" class="sr-only">Full Name</label>
+                            <input type="text" id="full-name" name="full-name" placeholder="Enter Your Full Name"
+                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                required>
+                        </div>
+                        <div>
+                            <label for="email" class="sr-only">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter Your Email"
+                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                required>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="phone" class="sr-only">Mobile Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter Your Mobile Number"
+                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                required>
+                        </div>
+                        <div>
+                            <label for="subject" class="sr-only">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="How Can I Help You"
+                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="sr-only">Additional Message</label>
+                        <textarea id="message" name="message" placeholder="Additional Message" rows="5"
+                            class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
+                            required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit"
+                            class="bg-green-500 hover:bg-green-600 text-white px-12 py-3 rounded-lg font-semibold transition-colors">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('homeForm');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Required fields that actually exist
+        const requiredFields = ['full-name', 'email', 'phone', 'subject', 'message'];
+
+        let hasEmpty = false;
+
+        requiredFields.forEach(id => {
+            const field = document.getElementById(id);
+            if (!field.value.trim()) {
+                field.classList.add('ring-red-500', 'ring', 'ring-2');
+                hasEmpty = true;
+            } else {
+                field.classList.remove('ring-red-500', 'ring', 'ring-2');
+            }
+        });
+
+        if (hasEmpty) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+            },
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+        })
+        .then(data => {
+            alert(data.message || 'Thank you! Your message has been sent.');
+            if (data.success) {
+                form.reset();
+            }
+        })
+        .catch(error => {
+            alert('There was an error sending your request.');
+            console.error(error);
+        });
+    });
+});
+</script>
+{% endblock content %}

@@ -1,0 +1,171 @@
+{% extends  'store/main.html' %}
+{% load  static %}
+
+{% block content %}
+<main>
+    <!-- About Us Hero Section -->
+    <section class="about-hero-bg min-h-20 py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <div class="mb-6">
+                        <div class="text-sm text-blue-300 mb-2">Home > About</div>
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+                        ABOUT US
+                    </h1>
+                    <p class="text-xl text-blue-100 mb-8">
+                        Inmarsat Maritime, a Viasat company
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connectivity with Certainty -->
+    <section class="connectivity-bg py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h2 class="text-4xl lg:text-4xl font-bold mb-8 leading-tight">
+                        CONNECTIVITY WITH CERTAINTY
+                    </h2>
+                    <div class="space-y-6 text-base text-blue-100 leading-relaxed">
+                        <p>
+                            Inmarsat Maritime is a Viasat company and continues to power the digitalisation,
+                            decarbonisation and crew welfare of the maritime industry.
+                        </p>
+                        <p>
+                            Since its inception in 1979, Inmarsat Maritime has been committed to keeping you
+                            connected anywhere, anytime, so that disruptions are minimal.
+                        </p>
+                        <p>
+                            Whether you're looking for L-band safety services or Ka-band high throughput
+                            satellite communications network for protecting lives at sea, we were the first
+                            satellite operator to meet the stringent requirements of the Global Maritime
+                            Distress and Safety System (GMDSS) and continue to lead the way.
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <a href="{% url 'discover_more' %}">
+                        <button
+                                class="bg-slate-100 hover:bg-slate-900 text-slate-900 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                            Our services & solutions
+                        </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="{% static 'img/ship.jpg' %}" alt="Maritime Officer"
+                         class="rounded-lg w-full h-96 object-cover shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety is in our DNA -->
+    <section class="gray-section py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop"
+                         alt="Stormy Seas" class="rounded-lg w-full h-80 object-cover shadow-2xl">
+                </div>
+                <div class="text-white order-1 lg:order-2">
+                    <h2 class="text-4xl lg:text-4xl font-bold mb-8 leading-tight">
+                        SAFETY IS IN OUR DNA
+                    </h2>
+                    <div class="space-y-6 text-base leading-relaxed">
+                        <p>
+                            At Inmarsat Maritime's service is proven and continues to be
+                            relied upon by the world's seafaring community, keeping 19 million seafarers at sea
+                            safe. We pride ourselves and investment by the International Mobile Satellite
+                            Organisation (IMSO) under stringent regulatory oversight that ensures
+                            the IMO because nothing is more important than protecting lives.
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <a href="{% url 'discover_more' %}">
+                        <button
+                                class="bg-slate-100 hover:bg-slate-900 text-slate-900 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                            Discover more
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digitalisation at Sea -->
+    <section class="bg-gray-200 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-gray-900">
+                    <h2 class="text-4xl lg:text-4xl font-bold mb-8 leading-tight">
+                        DIGITALISATION AT SEA
+                    </h2>
+                    <div class="space-y-6 text-base leading-relaxed">
+                        <p>
+                            As the maritime industry gets increasingly digitalised, shipping companies need to
+                            know their connectivity partner can deliver the services they require and only now but
+                            also be there in the future to enable further digitalisation. Our proven satellite
+                            technologies to enable vessels to function as "floating offices and homes".
+                        </p>
+                        <p>
+                            Viasat is investing heavily in the satellite network, capacity and technology to provide
+                            the maritime industry with the connectivity it needs today and to enable new operational
+                            applications, or for seafarers to keep in touch with loved ones.
+                        </p>
+                        <p>
+                            That's why so many shipping companies trust our connectivity solutions – all
+                            delivered through our world-leading satellite network.
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <a href="{% url 'discover_more' %}">
+                        <button
+                                class="bg-slate-900 hover:bg-slate-100 text-slate-100 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                            Discover more
+                        </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="{% static 'img/digitalisation.png' %}" alt="Maritime Sunset"
+                         class="rounded-lg w-full h-80 object-cover shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connected World -->
+    <section class="connected-world-bg py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h2 class="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
+                        CONNECTED WORLD
+                    </h2>
+                    <div class="space-y-6 text-lg leading-relaxed">
+                        <p>
+                            Viasat brings connectivity where it's needed most to
+                            unlock opportunity for the world. Discover how we are
+                            connecting people, businesses and governments on
+                            land, in the air, and at sea.
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <a href="{% url 'discover_more' %}">
+                        <button
+                                class="bg-slate-100 hover:bg-slate-900 text-slate-900 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                            Learn more about Viasat
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock content %}

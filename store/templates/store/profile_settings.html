@@ -1,0 +1,223 @@
+{% extends  'store/main.html' %}
+{% load  static %}
+
+{% block content %}
+<style>
+    #id_photo {
+        @apply bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:ring-2 focus:ring-inset focus:ring-skycast-blue;
+        margin-right: 0.5rem;
+        cursor: pointer;
+    }
+</style>
+<!-- Add padding to account for fixed navigation -->
+<div class="pt-24">
+    <!-- Main Content -->
+    <div class="max-w-4xl mx-auto py-6 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <!-- <div class="px-4 py-6 sm:px-0">
+            <h1 class="text-2xl font-semibold text-gray-900">Profile Settings</h1>
+            <p class="mt-1 text-sm text-gray-500">Manage your account settings and preferences</p>
+        </div> -->
+
+        <!-- Settings Form -->
+        <div class="mt-8">
+            <div class="bg-white shadow sm:rounded-lg">
+                <div class="px-4 py-5 sm:p-6">
+                    <h1 class="text-xl font-semibold leading-6 text-gray-900 text-center">Profile Settings</h1>
+                    <div class="mt-2 max-w-4xl text-sm text-gray-500 text-center">
+                        <p>Manage your account settings and preferences. Keep your information up to date to ensure
+                            the best experience.</p>
+                    </div>
+                    <form class="mt-5 space-y-6" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <!-- Profile Information -->
+                        <div>
+                            <h4 class="text-sm font-medium text-gray-900">Profile Information</h4>
+                            <div class="mt-4 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                                <!-- Profile Picture -->
+                                <div class="sm:col-span-6">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0">
+                                            {% if profile.photo %}
+                                            <img class="h-16 w-16 rounded-full object-cover" src="{{ profile.photo.url }}" alt="Profile picture">
+                                            {% else %}
+                                            <img class="h-16 w-16 rounded-full object-cover" src="{% static 'img/profile.avif' %}" alt="Profile picture">
+                                            {% endif %}
+                                        </div>
+                                        <div class="ml-4">
+                                            <!--                                             <label>Change photo:</label>-->
+                                            <input type="file" name="photo" accept="image/*" class="your-css-class">
+                                            <!--                                            <button type="button"-->
+                                            <!--                                                    class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:ring-2 focus:ring-inset focus:ring-skycast-blue">-->
+                                            <!--                                                Change photo-->
+                                            <!--                                            </button>-->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sm:col-span-3">
+                                    <label for="first-name" class="block text-sm font-medium text-gray-700">First
+                                        name</label>
+                                    <div class="mt-1">
+                                        <input type="text" name="first-name" id="first-name" value="{{ user.first_name }}"
+                                               class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-skycast-blue sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+
+                                <div class="sm:col-span-3">
+                                    <label for="last-name" class="block text-sm font-medium text-gray-700">Last
+                                        name</label>
+                                    <div class="mt-1">
+                                        <input type="text" name="last-name" id="last-name" value="{{ user.last_name }}"
+                                               class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-skycast-blue sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+
+                                <div class="sm:col-span-3">
+                                    <label for="email" class="block text-sm font-medium text-gray-700">Email
+                                        address</label>
+                                    <div class="mt-1">
+                                        <input type="email" name="email" id="email" value="{{ user.email }}" autocomplete="email"
+                                               class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-skycast-blue sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+
+                                <div class="sm:col-span-3">
+                                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone
+                                        number</label>
+                                    <div class="mt-1">
+                                        <input type="tel" name="phone" id="phone" value="{{ profile.phone|default_if_none:'' }}"
+                                               class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-skycast-blue sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+
+                                <div class="sm:col-span-3">
+                                    <label for="telegram_name" class="block text-sm font-medium text-gray-700">Telegram name</label>
+                                    <div class="mt-1">
+                                        <input type="text" name="telegram_name" id="telegram_name" value="{{ profile.telegram_name|default_if_none:'' }}"
+                                               class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-skycast-blue sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notification Preferences -->
+                        <div>
+                            <h4 class="text-sm font-medium text-gray-900">Notification Preferences</h4>
+                            <div class="mt-4 space-y-4">
+
+                                <div class="flex items-start">
+                                    <div class="flex h-6 items-center">
+                                        <input id="telegram-notifications" name="notification_setting" type="radio" value="telegram-notifications"
+                                               class="h-4 w-4 rounded border-gray-300 text-skycast-blue focus:ring-skycast-blue"  {% if profile.notification_setting == "telegram-notifications" %}checked{% endif %}>
+                                    </div>
+                                    <div class="ml-3 text-sm leading-6">
+                                        <label for="telegram-notifications" class="font-medium text-gray-900">Telegram
+                                            notifications</label>
+                                        <p class="text-gray-500">Receive text messages for important updates</p>
+                                    </div>
+                                </div>
+
+                                <!--                                <div class="flex items-start">-->
+                                <!--                                    <div class="flex h-6 items-center">-->
+                                <!--                                        <input id="email-notifications" name="notification_setting" type="radio" value="email-notifications"-->
+                                <!--                                               class="h-4 w-4 rounded border-gray-300 text-skycast-blue focus:ring-skycast-blue"-->
+                                <!--                                               {% if profile.notification_setting == "email-notifications" %}checked{% endif %}>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="ml-3 text-sm leading-6">-->
+                                <!--                                        <label for="email-notifications" class="font-medium text-gray-900">Email-->
+                                <!--                                            notifications</label>-->
+                                <!--                                        <p class="text-gray-500">Receive email updates about your account and orders-->
+                                <!--                                        </p>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
+
+                                <!--                                <div class="flex items-start">-->
+                                <!--                                    <div class="flex h-6 items-center">-->
+                                <!--                                        <input id="marketing-notifications" name="notification_setting" type="radio" value="marketing-notifications"-->
+                                <!--                                               class="h-4 w-4 rounded border-gray-300 text-skycast-blue focus:ring-skycast-blue"-->
+                                <!--                                               {% if profile.notification_setting == "marketing-notifications" %}checked{% endif %}>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="ml-3 text-sm leading-6">-->
+                                <!--                                        <label for="marketing-notifications" class="font-medium text-gray-900">Marketing-->
+                                <!--                                            emails</label>-->
+                                <!--                                        <p class="text-gray-500">Receive emails about new products and special-->
+                                <!--                                            offers</p>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
+                            </div>
+                        </div>
+
+                        <!-- Security Settings -->
+                        <div>
+                            <h4 class="text-sm font-medium text-gray-900">Security Settings</h4>
+                            {% if messages %}
+                            <ul class="text-sm mt-3 text-red-600 space-y-1">
+                                {% for message in messages %}
+                                <li>{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                            <div class="mt-4 space-y-4">
+                                <div>
+                                    <label for="current-password"
+                                           class="block text-sm font-medium text-gray-700">Current password</label>
+                                    <div class="mt-1">
+                                        <input type="password" name="current-password" id="current-password" autocomplete="current-password"
+                                               class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-skycast-blue sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="new-password" class="block text-sm font-medium text-gray-700">New
+                                        password</label>
+                                    <div class="mt-1">
+                                        <input type="password" name="new-password" id="new-password" autocomplete="new-password"
+                                               class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-skycast-blue sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="confirm-password"
+                                           class="block text-sm font-medium text-gray-700">Confirm new password</label>
+                                    <div class="mt-1">
+                                        <input type="password" name="confirm-password" id="confirm-password" autocomplete="confirm-password"
+                                               class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-skycast-blue sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Two-Factor Authentication -->
+                        <!--                            <div>-->
+                        <!--                                <h4 class="text-sm font-medium text-gray-900">Two-Factor Authentication</h4>-->
+                        <!--                                <div class="mt-4">-->
+                        <!--                                    <div class="flex items-center">-->
+                        <!--                                        <input id="two-factor" name="two-factor" type="checkbox"-->
+                        <!--                                            class="h-4 w-4 rounded border-gray-300 text-skycast-blue focus:ring-skycast-blue">-->
+                        <!--                                        <label for="two-factor" class="ml-3 block text-sm font-medium text-gray-700">-->
+                        <!--                                            Enable two-factor authentication-->
+                        <!--                                        </label>-->
+                        <!--                                    </div>-->
+                        <!--                                    <p class="mt-2 text-sm text-gray-500">-->
+                        <!--                                        Add an extra layer of security to your account by enabling two-factor-->
+                        <!--                                        authentication.-->
+                        <!--                                    </p>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+
+                        <!-- Save Changes Button -->
+                        <div class="flex justify-end">
+                            <button type="submit"
+                                    class="rounded-md bg-skycast-blue px-3 py-2 text-sm font-semibold text-white shadow hover:bg-skycast-blue/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-skycast-blue">
+                                Save Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

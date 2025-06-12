@@ -1,0 +1,466 @@
+/*================== Common styles ====================*/
+body {
+	font-family: "Inter", sans-serif;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1;
+}
+
+/*================== Navbar Styling ====================*/
+.darknav {
+	background-color: #0f172a !important;
+}
+
+/* Add styles for navigation link underline effect */
+.nav-link-underline {
+	position: relative;
+	transition: color 0.3s ease;
+}
+
+.nav-link-underline::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: -2px;
+	left: 0;
+	background-color: #0ea5e9;
+	transition: width 0.3s ease;
+}
+
+.nav-link-underline:hover::after,
+.nav-link-underline.active::after {
+	width: 100%;
+}
+
+.nav-link-underline:hover {
+	color: #0ea5e9;
+}
+
+/* Styles for the large hover submenu */
+.group:hover .absolute {
+	opacity: 1;
+	visibility: visible;
+}
+
+.group .absolute {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+}
+
+/* Additional styles for the mega-menu */
+.group .absolute.w-screen {
+	width: 100dvw;
+}
+/* .user-group .absolute.w-screen {
+	width: 300px;
+} */
+
+.group:hover .absolute.w-screen {
+	opacity: 1;
+	visibility: visible;
+}
+
+.group .absolute .p-6 {
+	padding: 1.5rem;
+}
+
+.group .absolute img {
+	width: 100%;
+	height: auto;
+	border-radius: 0.5rem;
+}
+
+.group .absolute h4 {
+	font-weight: 600;
+}
+
+.group .absolute ul {
+	list-style: none;
+	padding: 0;
+}
+
+.group .absolute ul li a {
+	display: block;
+	padding: 0.25rem 0;
+}
+
+.group .absolute .grid {
+	display: grid;
+	gap: 1rem;
+}
+
+.slide:hover .text-sm {
+	opacity: 1;
+}
+
+.slide:hover button {
+	opacity: 1;
+}
+
+.group:hover .text-sm {
+	opacity: 1;
+}
+
+.group:hover button {
+	opacity: 1;
+}
+/*================== Home Page ====================*/
+.hero-bg {
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+		url(../img/hero-bg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.contact-bg {
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+		url(../img/hero.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-hover {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.green-section {
+	background: linear-gradient(135deg, #6bd43d 0%, #22c55e 100%);
+}
+
+/*================== Tab button styles ====================*/
+.tab-button {
+	position: relative;
+	padding-bottom: 0.5rem;
+	transition: all 0.3s ease;
+}
+
+.tab-button.active {
+	color: #0ea5e9; /* skycast-blue */
+	border-bottom: 2px solid #0ea5e9;
+}
+
+.tab-button:hover {
+	color: #0ea5e9;
+}
+
+/*================== News Slider ===================Styles */
+/* Old slider styles removed to prevent conflicts with Swiper */
+
+/*====================== About Page =======================*/
+
+.about-hero-bg {
+	background-image: url(../img/about-hero.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom center;
+	padding-top: 40px;
+}
+.connectivity-bg {
+	background: linear-gradient(135deg, #103069 0%, #1e40af 50%, #0f172a 100%);
+}
+.card-hover {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.green-section {
+	background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+}
+
+.gray-section {
+	background: linear-gradient(135deg, #335669 0%, #1f3744 100%);
+}
+
+.connected-world-bg {
+	background: url(../img/connected-wrold-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+/*================= News Page =========================*/
+.hero-news-bg {
+	background-image: url("../img/news-hero.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+/*================= Service Page ======================*/
+.service-bg {
+	background-image: url("../img/service-hero.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.ocean-gradient {
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+		url(../img/ship.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.slide-container {
+	scroll-snap-type: x mandatory;
+}
+
+.slide {
+	scroll-snap-align: start;
+}
+
+.maritime-bg {
+	background: url(../img/maritime.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+/* Custom styles for the solutions and insights slider cards */
+.solutions-swiper .swiper-slide,
+.insights-swiper .swiper-slide,
+.services-swiper .swiper-slide {
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solutions-swiper .swiper-slide::before,
+.insights-swiper .swiper-slide::before,
+.services-swiper .swiper-slide::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+	z-index: 1;
+	transition: opacity 0.3s ease;
+}
+
+/* Hover effects for services slider */
+.services-swiper .swiper-slide:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.services-swiper .swiper-slide:hover::before {
+	opacity: 0.9;
+}
+
+.services-swiper .swiper-slide:hover h3 {
+	transform: translateY(-20px);
+}
+
+.services-swiper .swiper-slide:hover p {
+	opacity: 1;
+	transform: translateY(-20px);
+}
+
+.services-swiper .swiper-slide:hover button {
+	transform: translateY(-20px);
+}
+
+.services-swiper .swiper-slide h3,
+.services-swiper .swiper-slide p,
+.services-swiper .swiper-slide button {
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Custom styles for the solutions slider navigation and pagination - service.html */
+.swiper-wrapper {
+	padding-bottom: 90px;
+}
+
+.solutions-swiper .swiper-button-prev,
+.solutions-swiper .swiper-button-next,
+.insights-swiper .swiper-button-prev,
+.insights-swiper .swiper-button-next,
+.services-swiper .swiper-button-prev,
+.services-swiper .swiper-button-next {
+	position: absolute;
+	bottom: -10px;
+	top: auto;
+	width: 40px;
+	height: 40px;
+	margin-top: 0;
+	z-index: 20;
+	color: #0f172a;
+	background-color: none;
+	border-radius: 50%;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.solutions-swiper .swiper-button-prev,
+.insights-swiper .swiper-button-prev,
+.services-swiper .swiper-button-prev {
+	left: calc(50% - 50px);
+	transform: translateX(-100%);
+}
+
+.solutions-swiper .swiper-button-next,
+.insights-swiper .swiper-button-next,
+.services-swiper .swiper-button-next {
+	right: calc(50% - 90px);
+}
+
+.solutions-swiper .swiper-pagination.solutions-pagination,
+.insights-swiper .swiper-pagination.insights-pagination,
+.services-swiper .swiper-pagination.services-pagination {
+	bottom: 0;
+}
+
+.solutions-swiper .swiper-pagination-bullet,
+.insights-swiper .swiper-pagination-bullet,
+.services-swiper .swiper-pagination-bullet {
+	width: 8px;
+	height: 8px;
+	background: #cbd5e1;
+	opacity: 1;
+}
+
+.solutions-swiper .swiper-pagination-bullet-active,
+.insights-swiper .swiper-pagination-bullet-active,
+.services-swiper .swiper-pagination-bullet-active {
+	background: #0ea5e9;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+	font-size: 20px !important;
+}
+
+.solutions-swiper .swiper-slide,
+.insights-swiper .swiper-slide,
+.services-swiper .swiper-slide {
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solutions-swiper .swiper-slide:hover,
+.insights-swiper .swiper-slide:hover,
+.services-swiper .swiper-slide:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/*================= Contact Page ======================*/
+.contactnav {
+	background-color: #0f172a !important;
+}
+.shadow-text {
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-section {
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+		url(../img/hero.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-button {
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.contact-button::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 255, 255, 0.1),
+		transparent
+	);
+	transition: left 0.5s;
+}
+
+.contact-button:hover::before {
+	left: 100%;
+}
+
+.contact-button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.plus-icon {
+	transition: transform 0.3s ease;
+}
+
+.contact-button:hover .plus-icon {
+	transform: rotate(90deg);
+}
+
+/* News Swiper Styles */
+.newsSwiper {
+	padding: 20px 0;
+}
+
+.newsSwiper .swiper-button-next,
+.newsSwiper .swiper-button-prev {
+	color: #10b981; /* green-500 */
+	background: rgba(255, 255, 255, 0.9);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.newsSwiper .swiper-button-next:after,
+.newsSwiper .swiper-button-prev:after {
+	font-size: 18px;
+}
+
+.newsSwiper .swiper-button-next:hover,
+.newsSwiper .swiper-button-prev:hover {
+	background: white;
+}
+
+.newsSwiper .swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	background: #d1d5db; /* gray-300 */
+	opacity: 1;
+}
+
+.newsSwiper .swiper-pagination-bullet-active {
+	background: #10b981; /* green-500 */
+}
+
+.newsSwiper .swiper-slide {
+	height: auto;
+}
+
+/* Add some spacing between slides */
+.newsSwiper .swiper-slide {
+	padding: 10px;
+}

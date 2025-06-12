@@ -1,0 +1,359 @@
+{% extends  'store/main.html' %}
+{% load  static %}
+
+{% block content %}
+<!-- Add padding to account for fixed navigation -->
+<!-- Add padding to account for fixed navigation -->
+<div class="pt-24">
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="px-4 py-6 sm:px-0">
+            <h1 class="text-2xl font-semibold text-gray-900">Order History</h1>
+            <p class="mt-1 text-sm text-gray-500">View and manage your orders</p>
+        </div>
+
+        <!-- Orders Table -->
+        <div class="mt-8 flex flex-col">
+            <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                    <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-300">
+                            <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col"
+                                    class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">
+                                    Order ID</th>
+                                <th scope="col"
+                                    class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Date</th>
+                                <th scope="col"
+                                    class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Product
+                                </th>
+                                <th scope="col"
+                                    class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Status
+                                </th>
+                                <th scope="col"
+                                    class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Total</th>
+                                <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
+                                    <span class="sr-only">Actions</span>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 bg-white">
+                            <tr>
+                                <td
+                                        class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-skycast-blue sm:pl-6">
+                                    #12345</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">March 20, 2024
+                                </td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Weather Station
+                                    Pro</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm">
+                                            <span
+                                                    class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">Delivered</span>
+                                </td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">$299.99</td>
+                                <td
+                                        class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                                    <a href="#" class="text-skycast-blue hover:text-skycast-blue/80">View
+                                        Details</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                        class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-skycast-blue sm:pl-6">
+                                    #12344</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">March 15, 2024
+                                </td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Weather App
+                                    Subscription</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm">
+                                            <span
+                                                    class="inline-flex rounded-full bg-blue-100 px-2 text-xs font-semibold leading-5 text-blue-800">Active</span>
+                                </td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">$9.99/month</td>
+                                <td
+                                        class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                                    <a href="#" class="text-skycast-blue hover:text-skycast-blue/80">View
+                                        Details</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                        class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-skycast-blue sm:pl-6">
+                                    #12343</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">March 10, 2024
+                                </td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Weather Station
+                                    Basic</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm">
+                                            <span
+                                                    class="inline-flex rounded-full bg-yellow-100 px-2 text-xs font-semibold leading-5 text-yellow-800">Processing</span>
+                                </td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">$199.99</td>
+                                <td
+                                        class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                                    <a href="#" class="text-skycast-blue hover:text-skycast-blue/80">View
+                                        Details</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-4 flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
+            <div class="flex flex-1 justify-between sm:hidden">
+                <a href="#"
+                   class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
+                <a href="#"
+                   class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
+            </div>
+            <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+                <div>
+                    <p class="text-sm text-gray-700">
+                        Showing <span class="font-medium">1</span> to <span class="font-medium">3</span> of <span
+                            class="font-medium">3</span> results
+                    </p>
+                </div>
+                <div>
+                    <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+                        <a href="#"
+                           class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                            <span class="sr-only">Previous</span>
+                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                      d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
+                                      clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-current="page"
+                           class="relative z-10 inline-flex items-center bg-skycast-blue px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-skycast-blue">1</a>
+                        <a href="#"
+                           class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                            <span class="sr-only">Next</span>
+                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                      clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Order Details Modal -->
+<div id="orderDetailsModal" class="fixed inset-0 bg-gray-500 bg-opacity-75 hidden z-50 overflow-y-auto">
+    <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+        <div
+                class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl">
+            <!-- Modal Header -->
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 flex justify-between items-center">
+                <h3 class="text-lg font-semibold text-gray-900">Order Details</h3>
+                <button type="button" id="closeModal" class="text-gray-400 hover:text-gray-500">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6">
+                <div class="space-y-6">
+                    <!-- Order Summary -->
+                    <div class="border-b pb-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Order ID</p>
+                                <p class="mt-1 text-sm text-gray-900" id="modalOrderId">#12345</p>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Order Date</p>
+                                <p class="mt-1 text-sm text-gray-900" id="modalOrderDate">March 20, 2024</p>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Status</p>
+                                <p class="mt-1" id="modalOrderStatus">
+                                        <span
+                                                class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">Delivered</span>
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Total Amount</p>
+                                <p class="mt-1 text-sm text-gray-900" id="modalOrderTotal">$299.99</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Details -->
+                    <div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-4">Product Information</h4>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <div class="flex items-start space-x-4">
+                                <img src="img/weather-station.jpg" alt="Product"
+                                     class="w-20 h-20 object-cover rounded-lg" id="modalProductImage">
+                                <div class="flex-1">
+                                    <h5 class="text-sm font-medium text-gray-900" id="modalProductName">Weather
+                                        Station Pro</h5>
+                                    <p class="mt-1 text-sm text-gray-500" id="modalProductDescription">Professional
+                                        weather monitoring system with advanced sensors and real-time data analysis.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Information -->
+                    <div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-4">Shipping Information</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Shipping Address</p>
+                                <p class="mt-1 text-sm text-gray-900" id="modalShippingAddress">
+                                    123 Main Street<br>
+                                    Suite 100<br>
+                                    New York, NY 10001
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Shipping Method</p>
+                                <p class="mt-1 text-sm text-gray-900" id="modalShippingMethod">Express Delivery</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tracking Information -->
+                    <div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-4">Tracking Information</h4>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0">
+                                        <svg class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                  clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-sm text-gray-900">Order Confirmed</p>
+                                        <p class="text-xs text-gray-500">March 20, 2024 - 10:00 AM</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0">
+                                        <svg class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                  clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-sm text-gray-900">Shipped</p>
+                                        <p class="text-xs text-gray-500">March 21, 2024 - 2:30 PM</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0">
+                                        <svg class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                  clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-sm text-gray-900">Delivered</p>
+                                        <p class="text-xs text-gray-500">March 22, 2024 - 11:15 AM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button" id="closeModalBtn"
+                        class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-skycast-blue focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+        // Modal functionality
+        const modal = document.getElementById('orderDetailsModal');
+        const closeModal = document.getElementById('closeModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const viewDetailsButtons = document.querySelectorAll('a[href="#"]');
+
+        // Function to show modal with order details
+        function showOrderDetails(orderId, date, product, status, total) {
+            // Update modal content
+            document.getElementById('modalOrderId').textContent = orderId;
+            document.getElementById('modalOrderDate').textContent = date;
+            document.getElementById('modalProductName').textContent = product;
+            document.getElementById('modalOrderTotal').textContent = total;
+
+            // Update status with appropriate color
+            const statusElement = document.getElementById('modalOrderStatus');
+            statusElement.innerHTML = '';
+            const statusSpan = document.createElement('span');
+            statusSpan.className = `inline-flex rounded-full px-2 text-xs font-semibold leading-5 ${status === 'Delivered' ? 'bg-green-100 text-green-800' :
+                    status === 'Active' ? 'bg-blue-100 text-blue-800' :
+                        'bg-yellow-100 text-yellow-800'
+                }`;
+            statusSpan.textContent = status;
+            statusElement.appendChild(statusSpan);
+
+            // Show modal
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Add click event to all view details buttons
+        viewDetailsButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const row = button.closest('tr');
+                const orderId = row.cells[0].textContent;
+                const date = row.cells[1].textContent;
+                const product = row.cells[2].textContent;
+                const status = row.cells[3].querySelector('span').textContent;
+                const total = row.cells[4].textContent;
+
+                showOrderDetails(orderId, date, product, status, total);
+            });
+        });
+
+        // Close modal functions
+        function closeModalFunction() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        closeModal.addEventListener('click', closeModalFunction);
+        closeModalBtn.addEventListener('click', closeModalFunction);
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModalFunction();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModalFunction();
+            }
+        });
+    </script>
+{% endblock content %}
